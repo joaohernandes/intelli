@@ -75,5 +75,5 @@ if st.button("Processar e Inserir no Banco de Dados"):
         combined_df = df
 
     combined_df.to_excel(file_path, index=False)
-    st.success(f"✅ Dados processados e salvos na base {opcao_base}.xlsx com sucesso!")
+    st.success(f"✅ Dados processados e salvos na base {opcao_base} com sucesso!")
     st.dataframe(df)
