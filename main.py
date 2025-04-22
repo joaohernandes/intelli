@@ -3,7 +3,7 @@ import pandas as pd
 import re
 import os
 
-st.title("Validador e Estruturador de Dados para Múltiplos Excel")
+st.title("Validador e Estruturador de Dados")
 
 st.markdown("Insira os dados do cliente de forma livre abaixo (ex: 'João, 32 anos, casado, email joao@email.com, 2 compras, renda 50 mil')")
 input_text = st.text_area("Texto com os dados do cliente")
@@ -11,7 +11,7 @@ input_text = st.text_area("Texto com os dados do cliente")
 st.markdown("Escolha para qual base deseja salvar os dados:")
 opcao_base = st.selectbox("Base de destino:", ["CadastroCliente", "Clientes", "Vendas"])
 
-if st.button("Processar e Inserir no Excel"):
+if st.button("Processar e Inserir no Banco de Dados"):
     # Expressões regulares para extrair informações básicas
     nome = re.search(r"([A-ZÀ-Ú][a-zà-ü]+(?: [A-ZÀ-Ú][a-zà-ü]+)*)", input_text)
     idade = re.search(r"(\d{2})\s*anos", input_text)
